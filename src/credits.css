@@ -1,0 +1,104 @@
+.brand-name{display:flex;align-items:baseline;gap:4px}
+.brand-name small{font:700 7px 'DM Sans',sans-serif;letter-spacing:1.1px;color:#899287;margin-left:3px}
+.weather-source{font-size:8px;color:#9da397;text-decoration:underline;text-underline-offset:2px}
+.photo-credit{position:absolute;right:10px;bottom:10px;max-width:50%;background:#203b2cba;color:#fff;border-radius:3px;padding:4px 6px;font:8px 'DM Sans',sans-serif;text-align:right}
+.photo-credit a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.detail-image-frame{position:relative;min-height:410px}
+.detail-image-frame .detail-photo{display:block}
+@media(max-width:650px){.detail-image-frame{min-height:0}.detail-image-frame .detail-photo{height:200px;min-height:0}}
+
+/* Editorial photo treatment and a direct route from each image to its Maps listing. */
+.place-image{background-position:center 48%;transition:background-position .35s ease,filter .35s ease}
+.place-image::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(180deg,#16271b38 0%,transparent 34%,transparent 62%,#16271b25 100%)}
+.place-card:hover .place-image{background-position:center 44%;filter:saturate(1.08) contrast(1.035)}
+.photo-map-link{position:absolute;top:12px;left:12px;z-index:2;padding:7px 10px;border:1px solid #ffffff80;border-radius:20px;background:#1f3026aa;color:#fff;font-size:9px;font-weight:600;letter-spacing:.2px;backdrop-filter:blur(8px);box-shadow:0 2px 10px #17291e28;transition:background .18s,transform .18s}
+.photo-map-link:hover{background:#203d2c;transform:translateY(-1px)}
+.place-image .save-float,.place-image .photo-label,.place-image .photo-credit{z-index:1}
+.detail-image-frame .photo-map-link{top:12px;left:12px}
+@media(max-width:650px){.photo-map-link{top:9px;left:9px;padding:6px 8px;font-size:8px}}
+
+.budget-planner{display:grid;grid-template-columns:minmax(250px,.82fr) minmax(0,1.18fr);gap:28px;margin:34px 0;padding:26px;background:#eeeee6;border:1px solid #e4e4d9;border-radius:10px;align-items:start}
+.budget-controls h2{font:500 24px 'Playfair Display',serif;letter-spacing:-.3px;margin-top:7px;color:#2d4438}
+.budget-controls>p{font-size:10px;line-height:1.5;color:#7a847a;margin-top:6px}
+.budget-entry{display:flex;align-items:baseline;gap:7px;margin-top:17px;color:#355b47}
+.budget-entry>span{font:500 26px 'Playfair Display',serif}
+.budget-entry input{width:106px;border:0;border-bottom:1px solid #a8b49f;background:transparent;padding:3px 0;font:500 28px 'Playfair Display',serif;color:#2d4438;outline:none}
+.budget-entry input:focus{border-color:#e87957}
+.budget-entry small{font-size:10px;color:#7c887c}
+.budget-range{display:block;width:100%;margin:11px 0 8px;accent-color:#e87957}
+.budget-presets{display:flex;gap:7px}
+.budget-presets button{border:1px solid #d8ded2;border-radius:16px;background:#f8f7f1;color:#627364;padding:6px 12px;font-size:9px}
+.budget-presets button.active,.budget-presets button:hover{background:#335a47;border-color:#335a47;color:#fff}
+.travel-select{margin-top:21px}
+.travel-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:8px}
+.travel-options button{display:flex;flex-direction:column;gap:4px;align-items:flex-start;text-align:left;border:1px solid #dce0d6;background:#f9f8f3;border-radius:6px;padding:9px 8px;color:#526659}
+.travel-options button b{font-size:10px}
+.travel-options button small{font-size:8px;color:#899288;white-space:nowrap}
+.travel-options button.active{border-color:#365e49;background:#365e49;color:#fff;box-shadow:0 3px 0 #264635}
+.travel-options button.active small{color:#d9e5d5}
+.travel-note{display:block;margin-top:8px;font-size:8px;line-height:1.45;color:#91978d}
+.budget-breakdown{padding:19px 20px 14px;background:#fffdf8;border:1px solid #e8e5dc;border-radius:8px;box-shadow:0 5px 18px #29433408}
+.budget-breakdown-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.budget-breakdown-head h3{font:500 20px 'Playfair Display',serif;color:#2d4438;margin-top:3px}
+.budget-person{font-size:9px;color:#778377;border:1px solid #e2e5dc;border-radius:14px;padding:5px 9px}
+.budget-total{display:flex;align-items:baseline;gap:9px;margin-top:14px}
+.budget-total strong{font:500 30px 'Playfair Display',serif;letter-spacing:-.8px;color:#345a46}
+.budget-total span{font-size:9px;color:#879084}
+.budget-status{margin-top:5px;font-size:10px;color:#647465}
+.budget-items{list-style:none;padding:0;margin:13px 0 0}
+.budget-items li{display:grid;grid-template-columns:43px minmax(0,1fr) auto;align-items:center;gap:10px;border-top:1px solid #efede6;padding:10px 0}
+.budget-items time{font:10px 'DM Sans',sans-serif;color:#9a8d72}
+.budget-items li div{min-width:0}
+.budget-items li b{display:block;font:500 12px 'Playfair Display',serif;color:#3a5143;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.budget-items li small{display:block;margin-top:3px;font-size:8px;color:#92988e}
+.budget-items li>strong{font-size:10px;color:#596d5d;white-space:nowrap}
+.budget-disclaimer{border-top:1px solid #efede6;padding-top:10px;margin-top:5px;font-size:8px;line-height:1.5;color:#92988e}
+.budget-disclaimer a{color:#456c53;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+@media(max-width:760px){.budget-planner{grid-template-columns:1fr;gap:21px;padding:19px}.budget-controls h2{font-size:21px}.budget-breakdown{padding:16px}}
+@media(max-width:380px){.travel-options{gap:4px}.travel-options button{padding:8px 5px}.travel-options button b{font-size:9px}.travel-options button small{font-size:7px}.budget-total strong{font-size:25px}.budget-items li{grid-template-columns:37px minmax(0,1fr) auto;gap:7px}}
+
+.weather-day{margin:31px 0 34px;padding:23px;background:#e8ece3;border:1px solid #dfe5da;border-radius:10px;overflow:hidden}
+.weather-day-header{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:15px}
+.weather-day-header h2,.weather-loading h2,.weather-unavailable h2{font:500 24px 'Playfair Display',serif;letter-spacing:-.3px;margin-top:5px;color:#2c4938}
+.weather-day-header p,.weather-loading p,.weather-unavailable p{font-size:10px;color:#7e897d;margin-top:5px}
+.forecast-source,.weather-loading>a{font-size:9px;color:#55755d;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.weather-day-content{display:grid;grid-template-columns:minmax(220px,.78fr) minmax(0,1.22fr);gap:12px}
+.weather-summary{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:10px;row-gap:9px;padding:17px 18px;background:linear-gradient(135deg,#315b48,#234635);border-radius:8px;color:#f8f6ed;min-height:178px;overflow:hidden}
+.weather-summary:after{content:"";position:absolute;width:170px;height:170px;border:1px solid #ffffff17;border-radius:50%;right:-65px;top:-70px;box-shadow:0 0 0 18px #ffffff09,0 0 0 36px #ffffff06;pointer-events:none}
+.weather-current-icon{position:absolute;right:17px;top:12px;font-size:38px;filter:drop-shadow(0 5px 8px #14291c60)}
+.weather-now{display:flex;flex-direction:column;gap:1px;z-index:1}
+.weather-now span{font-size:9px;color:#dae4d7}
+.weather-now strong{font:500 42px 'Playfair Display',serif;line-height:1.1}
+.weather-high-low{display:flex;align-items:baseline;gap:5px;color:#e3eadc;z-index:1}
+.weather-high-low b{font:500 12px 'DM Sans',sans-serif}
+.weather-high-low span,.weather-high-low i{font-size:8px;color:#c1d1bf;font-style:normal}
+.weather-rain{grid-column:1/-1;display:flex;gap:7px;align-items:center;padding-top:8px;border-top:1px solid #ffffff24;font-size:10px;z-index:1}
+.weather-rain span{font-size:9px;color:#e0e9dc}
+.weather-sunrise{grid-column:1/-1;display:flex;align-items:center;gap:6px;font-size:8px;color:#c6d7c4;z-index:1}
+.weather-sunrise b{font-weight:600;color:#fff;margin-right:9px}
+.weather-outlook{padding:15px 16px;background:#fffdf8;border:1px solid #e7e7dc;border-radius:8px;display:flex;flex-direction:column;justify-content:center}
+.weather-hours{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:9px}
+.weather-hour{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 3px;background:#f5f4ed;border:1px solid #efeee6;border-radius:6px;min-width:0}
+.weather-hour>span{font-size:8px;color:#8b9387}
+.weather-hour i{font-style:normal;font-size:19px;line-height:1.1}
+.weather-hour b{font:500 14px 'Playfair Display',serif;color:#3b5947}
+.weather-hour small{font-size:7px;color:#9a9e92;white-space:nowrap}
+.weather-advice{font-size:9px;line-height:1.5;color:#7b867b;margin-top:12px;padding-left:9px;border-left:2px solid #d8a477}
+.weather-loading,.weather-unavailable{display:flex;align-items:center;justify-content:space-between;min-height:120px}
+.weather-unavailable button{border:1px solid #cdd8ca;border-radius:18px;background:#f9f8f2;padding:8px 12px;color:#48644e;font-size:9px}
+@media(max-width:800px){.weather-day-content{grid-template-columns:1fr}.weather-summary{min-height:160px}}
+@media(max-width:560px){.weather-day{padding:16px;margin:25px 0}.weather-day-header{align-items:flex-start}.weather-day-header h2,.weather-loading h2,.weather-unavailable h2{font-size:20px}.weather-hours{gap:4px}.weather-hour{padding:8px 1px}.weather-hour small{font-size:6px}.weather-summary{padding:14px}.forecast-source{font-size:8px}}
+
+.budget-recommendations{margin:12px 0 13px;padding:12px 13px;background:#f5f4ed;border-left:2px solid #6b8b69;border-radius:0 6px 6px 0}
+.budget-recommendations.save{border-left-color:#e87957;background:#fbf3ec}
+.budget-recommendations.check{border-left-color:#c29b5c;background:#f7f3e9}
+.budget-recommendations h4{margin-top:4px;font:500 15px 'Playfair Display',serif;color:#355442}
+.budget-recommendations>p{margin-top:5px;font-size:9px;line-height:1.5;color:#7b8478}
+.budget-suggestion-list{display:grid;gap:5px;margin-top:8px}
+.budget-suggestion-list button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:8px 9px;text-align:left;border:1px solid #e7e5dc;border-radius:5px;background:#fffdf8;transition:border-color .15s,transform .15s}
+.budget-suggestion-list button:hover{border-color:#a8b79e;transform:translateX(2px)}
+.budget-suggestion-list button>span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.budget-suggestion-list button b{font:500 11px 'Playfair Display',serif;color:#415a49}
+.budget-suggestion-list button small{font-size:8px;line-height:1.4;color:#8a9188}
+.budget-suggestion-list button i{font-style:normal;font-size:8px;color:#557458;white-space:nowrap}
+.budget-recommendations.save .budget-suggestion-list button i{color:#bf684a}
